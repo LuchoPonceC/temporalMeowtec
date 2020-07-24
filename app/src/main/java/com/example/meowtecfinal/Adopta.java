@@ -9,20 +9,19 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class Adopta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_adopta);
 
         //Iniciaalizar y asignar variable
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         //Setear Home como seleccionado
-        bottomNavigationView.setSelectedItemId(R.id.inicio);
-
+        bottomNavigationView.setSelectedItemId(R.id.adopta);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -33,13 +32,12 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), Albergues.class));
                         overridePendingTransition(0,0);
                         return true;
-
                     case R.id.inicio:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
 
                     case R.id.adopta:
-                        startActivity(new Intent(getApplicationContext(), Adopta.class));
-                        overridePendingTransition(0,0);
                         return true;
 
                     case R.id.nosotros:
@@ -52,10 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
-
-
-
-
-
 }

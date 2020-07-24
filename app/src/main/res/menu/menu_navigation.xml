@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/inicio"
+        android:title="Inicio"
+        android:icon="@drawable/ic_home_black_24dp"/>
+
+    <item
+        android:id="@+id/albergues"
+        android:title="Albergues"
+        android:icon="@drawable/ic_favorite_border_black_24dp"/>
+
+    <item
+        android:id="@+id/adopta"
+        android:title="Adopta"
+        android:icon="@drawable/ic_child_friendly_black_24dp"/>
+
+    <item
+        android:id="@+id/nosotros"
+        android:title="Nosotros"
+        android:icon="@drawable/ic_person_black_24dp"/>
+
+</menu>
