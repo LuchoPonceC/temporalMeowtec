@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="8dp"
+        android:layout_marginBottom="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBacgroundCard"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/movieimageView"
+                android:layout_width="117dp"
+                android:layout_height="124dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/gato1"/>
+
+            <TextView
+                android:id="@+id/movienameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:textStyle="bold"
+                android:layout_alignTop="@+id/movieimageView"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/movieimageView"
+                android:layout_toEndOf="@+id/movieimageView" />
+
+            <TextView
+                android:id="@+id/moviedescTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/movienameTV"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/movieimageView"
+                android:layout_toEndOf="@+id/movieimageView" />
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

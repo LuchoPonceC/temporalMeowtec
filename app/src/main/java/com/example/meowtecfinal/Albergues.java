@@ -6,8 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ListView;
 
+import com.example.meowtecfinal.model.AlbergueDetails;
+import com.example.meowtecfinal.model.Model;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
 
 public class Albergues extends AppCompatActivity {
 
@@ -15,6 +20,12 @@ public class Albergues extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_albergues);
+
+        ListView listView = (ListView) findViewById(R.id.list_view);
+        ArrayList<Model> models = AlbergueDetails.getAlbergues();
+        AdapterAlbergue albergueAdapter = new AdapterAlbergue(Albergues.this, models);
+
+        listView.setAdapter(albergueAdapter);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -47,10 +58,6 @@ public class Albergues extends AppCompatActivity {
                 return false;
             }
         });
-
-
-
-
     }
 
 
