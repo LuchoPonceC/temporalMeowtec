@@ -4,4 +4,18 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="form_contact_title">CONTÁCTANOS</string>
+    <string name="form_contact_name">NOMBRE</string>
+    <string name="form_contact_last_name">APELLIDOS</string>
+    <string name="form_contact_phone">CELULAR</string>
+    <string name="form_contact_email">CORREO</string>
+    <string name="form_contact_message">MENSAJE</string>
+    <string name="form_contact_send">Enviar</string>
+    <string name="form_contact_fb">https://www.facebook.com/Meowtec/</string>
+    <string name="form_contact_ig">\@meowutec_utec</string>
+    <string name="form_contact_link">link de invitación</string>
+    <string name="form_contact_mail">meowtec@utec.edu.pe</string>
+
+
 </resources>
