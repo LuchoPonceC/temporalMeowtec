@@ -16,7 +16,7 @@ public class AdapterAlbergue extends BaseAdapter {
     private Context context;
     private ArrayList<AlbergueModel> albergueModels;
 
-    AdapterAlbergue(Context context, ArrayList<AlbergueModel> albergueModels){
+    AdapterAlbergue(Context context, ArrayList<AlbergueModel> albergueModels ){
         this.context = context;
         this.albergueModels = albergueModels;
     }

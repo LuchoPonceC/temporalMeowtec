@@ -16,6 +16,14 @@ public class Nosotros extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nosotros);
 
+
+
+        
+
+
+
+
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         //Setear Home como seleccionado

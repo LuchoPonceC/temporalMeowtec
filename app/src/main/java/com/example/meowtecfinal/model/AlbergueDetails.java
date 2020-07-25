@@ -2,12 +2,48 @@ package com.example.meowtecfinal.model;
 
 import com.example.meowtecfinal.R;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class AlbergueDetails {
 
-    public static ArrayList<AlbergueModel> getAlbergues(){
+    public static ArrayList<AlbergueModel> getAlbergues(JSONArray albergues){
+
+        //ArrayList<JSONObject> listadata = new ArrayList<JSONObject>();
+
+        System.out.println("GAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         ArrayList<AlbergueModel> alberguesList = new ArrayList<>();
+
+
+/*
+
+        ArrayList<JSONObject> listadata = new ArrayList<JSONObject>();
+
+
+
+        for(int i=0;i<albergues.length();i++){
+            try {
+                listadata.add(albergues.getJSONObject(i));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        for(int i=0; i<listadata.size(); i++){
+            try {
+                alberguesList.add(new AlbergueModel(R.drawable.gato1,(listadata.get(i)).getString("nombre_albergue"),(listadata.get(i)).getString("albergam"),(listadata.get(i)).getString("ciudad"),
+                        Integer.toString(2020 - Integer.parseInt((listadata.get(i)).getString("anios"))),
+                        (listadata.get(i)).getString("num_gatos"),(listadata.get(i)).getString("nombre"),(listadata.get(i)).getString("telefono")));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+*/
+
 
         alberguesList.add(new AlbergueModel(R.drawable.gato1,"Albergue 1","Este es el alberguito1","Lima","20 Marzo",
                 "100 Gatos Rescatos","Pepito 2 Cañones","123"));
