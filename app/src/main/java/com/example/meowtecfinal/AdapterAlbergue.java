@@ -7,28 +7,28 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.meowtecfinal.model.Model;
+import com.example.meowtecfinal.model.AlbergueModel;
 
 import java.util.ArrayList;
 
 public class AdapterAlbergue extends BaseAdapter {
 
     private Context context;
-    private ArrayList<Model> models;
+    private ArrayList<AlbergueModel> albergueModels;
 
-    AdapterAlbergue(Context context, ArrayList<Model> models){
+    AdapterAlbergue(Context context, ArrayList<AlbergueModel> albergueModels){
         this.context = context;
-        this.models = models;
+        this.albergueModels = albergueModels;
     }
 
     @Override
     public int getCount() {
-        return models.size();
+        return albergueModels.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return models.get(position);
+        return albergueModels.get(position);
     }
 
     @Override
@@ -43,13 +43,24 @@ public class AdapterAlbergue extends BaseAdapter {
             view = View.inflate(context , R.layout.list_albergues, null);
         }
 
-        ImageView images = (ImageView)view.findViewById(R.id.movieimageView);
-        TextView title = (TextView)view.findViewById(R.id.movienameTV);
-        TextView about = (TextView)view.findViewById(R.id.moviedescTV);
-        Model model = models.get(position);
-        images.setImageResource(model.getMovieImage());
-        title.setText(model.getMovieTitle());
-        about.setText(model.getAboutMovie());
+        ImageView images = (ImageView)view.findViewById(R.id.imageAlbergue);
+        TextView name = (TextView)view.findViewById(R.id.albergueName);
+        TextView tipo = (TextView)view.findViewById(R.id.albergueTipo);
+        TextView place = (TextView)view.findViewById(R.id.alberguePlace);
+        TextView date = (TextView)view.findViewById(R.id.albergueDate);
+        TextView size = (TextView)view.findViewById(R.id.albergueSize);
+        TextView rName = (TextView)view.findViewById(R.id.albergueRName);
+        TextView rNumber = (TextView)view.findViewById(R.id.albergueRNumber);
+
+        AlbergueModel albergueModel = albergueModels.get(position);
+        images.setImageResource(albergueModel.getAlbergueImage());
+        name.setText(albergueModel.getAlbergueName());
+        tipo.setText(albergueModel.getAlbergueTipo());
+        place.setText(albergueModel.getAlberguePlace());
+        date.setText(albergueModel.getAlbergueDate());
+        size.setText(albergueModel.getAlbergueSize());
+        rName.setText(albergueModel.getAlbergueRName());
+        rNumber.setText(albergueModel.getAlbergueRNumber());
 
 
 

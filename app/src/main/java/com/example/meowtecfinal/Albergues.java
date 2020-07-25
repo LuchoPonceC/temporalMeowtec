@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.meowtecfinal.model.AlbergueDetails;
-import com.example.meowtecfinal.model.Model;
+import com.example.meowtecfinal.model.AlbergueModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -21,13 +21,13 @@ public class Albergues extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_albergues);
 
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        ArrayList<Model> models = AlbergueDetails.getAlbergues();
-        AdapterAlbergue albergueAdapter = new AdapterAlbergue(Albergues.this, models);
-
+        ListView listView = (ListView) findViewById(R.id.list_albergue_view);
+        ArrayList<AlbergueModel> albergueModels = AlbergueDetails.getAlbergues();
+        AdapterAlbergue albergueAdapter = new AdapterAlbergue(Albergues.this, albergueModels);
         listView.setAdapter(albergueAdapter);
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+
 
         //Setear Home como seleccionado
         bottomNavigationView.setSelectedItemId(R.id.albergues);

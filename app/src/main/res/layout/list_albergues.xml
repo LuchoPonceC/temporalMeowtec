@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        card_view:cardUseCompatPadding="true"
+        android:layout_marginBottom="16dp"
         card_view:cardCornerRadius="8dp"
-        android:layout_marginBottom="16dp">
+        card_view:cardUseCompatPadding="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             android:paddingBottom="4dp">
 
             <ImageView
-                android:id="@+id/movieimageView"
+                android:id="@+id/imageAlbergue"
                 android:layout_width="117dp"
                 android:layout_height="124dp"
                 android:layout_alignParentStart="true"
@@ -28,39 +29,148 @@
                 android:src="@drawable/gato1" />
 
             <TextView
-                android:id="@+id/movienameTV"
-                android:layout_width="108dp"
+                android:id="@+id/albergueName"
+                android:layout_width="127dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/movieimageView"
+                android:layout_alignTop="@+id/imageAlbergue"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="168dp"
-                android:layout_marginRight="168dp"
-                android:layout_toEndOf="@+id/movieimageView"
-                android:layout_toRightOf="@+id/movieimageView"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="149dp"
+                android:layout_marginRight="149dp"
+                android:layout_toEndOf="@+id/imageAlbergue"
+                android:layout_toRightOf="@+id/imageAlbergue"
+                android:textColor="@color/colorAlbergueName"
+                android:textSize="20sp"
+                card_view:textAllCaps="true"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/moviedescTV"
-                android:layout_width="106dp"
+                android:id="@+id/albergueR"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/movienameTV"
+                android:layout_alignTop="@+id/imageAlbergue"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="142dp"
+
+                android:layout_marginLeft="142dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="8dp"
+                android:layout_toEndOf="@+id/imageAlbergue"
+                android:layout_toRightOf="@+id/imageAlbergue"
+                android:text="REPRESENTANTE"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorAlbergueName"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/albergueTipo"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/albergueName"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginTop="9dp"
-                android:layout_marginEnd="170dp"
-                android:layout_marginRight="170dp"
-                android:layout_toEndOf="@+id/movieimageView"
-                android:layout_toRightOf="@+id/movieimageView" />
+                android:layout_marginEnd="149dp"
+                android:layout_marginRight="149dp"
+                android:layout_toEndOf="@+id/imageAlbergue"
+                android:layout_toRightOf="@+id/imageAlbergue"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/albergueRName"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/albergueName"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="144dp"
+                android:layout_marginLeft="144dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_toEndOf="@+id/imageAlbergue"
+                android:layout_toRightOf="@+id/imageAlbergue"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/albergueRNumber"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/albergueRName"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="142dp"
+                android:layout_marginLeft="142dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/imageAlbergue"
+                android:layout_toRightOf="@+id/imageAlbergue"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/albergueSize"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alberguePlace"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="148dp"
+                android:layout_marginRight="148dp"
+                android:layout_toEndOf="@+id/imageAlbergue"
+                android:layout_toRightOf="@+id/imageAlbergue"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/alberguePlace"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/albergueTipo"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginEnd="218dp"
+                android:layout_marginRight="218dp"
+                android:layout_toEndOf="@+id/imageAlbergue"
+                android:layout_toRightOf="@+id/imageAlbergue"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/albergueDate"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/albergueTipo"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginLeft="68dp"
+
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="151dp"
+                android:layout_marginRight="151dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toEndOf="@+id/imageAlbergue"
+                android:layout_toRightOf="@+id/imageAlbergue"
+                android:textSize="10sp" />
 
 
         </RelativeLayout>
-
 
 
     </androidx.cardview.widget.CardView>

@@ -12,29 +12,27 @@
         android:orientation="horizontal" >
 
 
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
+            android:layout_marginBottom="16dp"
             android:layout_weight="1"
             android:contentDescription="@string/app_name"
-            android:paddingTop="15dp"
 
-            card_view:cardUseCompatPadding="true"
+            android:paddingTop="15dp"
             card_view:cardCornerRadius="8dp"
-            android:layout_marginBottom="16dp">
+            card_view:cardUseCompatPadding="true">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="131dp"
+                android:layout_height="156dp"
                 android:background="@color/colorBacgroundCard"
                 android:paddingBottom="4dp">
 
                 <ImageView
-                    android:id="@+id/movieimageView"
+                    android:id="@+id/adoptaImage1"
                     android:layout_width="187dp"
                     android:layout_height="101dp"
                     android:layout_alignParentStart="true"
@@ -43,25 +41,30 @@
                     android:src="@drawable/gato1" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/catName1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="65dp"
                     android:layout_marginTop="111dp"
-                    android:text="TextView" />
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/catAge1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="132dp"
+                    android:textColor="@android:color/black" />
 
 
             </RelativeLayout>
 
 
-
         </androidx.cardview.widget.CardView>
-
-
-
-
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view2"
@@ -78,28 +81,41 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="131dp"
+                android:layout_height="156dp"
                 android:background="@color/colorBacgroundCard"
                 android:paddingBottom="4dp">
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="65dp"
-                    android:layout_marginBottom="0dp"
-                    android:text="TextView" />
-
                 <ImageView
-                    android:id="@+id/movieimageView2"
+                    android:id="@+id/adoptaImage2"
                     android:layout_width="182dp"
                     android:layout_height="99dp"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="5dp"
                     android:src="@drawable/gato2" />
+
+
+                <TextView
+                    android:id="@+id/catName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="111dp"
+
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/catAge2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="133dp"
+                    android:layout_marginEnd="72dp"
+                    android:textColor="@android:color/black" />
 
 
             </RelativeLayout>

@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorBar">#FE9873</color>
     <color name="colorBacgroundCard">#E4F2FF</color>
+    <color name="colorAlbergueName">#3F5BAE</color>
 </resources>

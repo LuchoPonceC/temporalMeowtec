@@ -8,12 +8,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.example.meowtecfinal.model.AlbergueDetails;
-import com.example.meowtecfinal.model.Model;
+import com.example.meowtecfinal.model.AdoptaDetails;
+import com.example.meowtecfinal.model.AdoptaModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Adopta extends AppCompatActivity {
 
@@ -23,6 +22,10 @@ public class Adopta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adopta);
 
+        ListView listview = (ListView) findViewById(R.id.list_adopta_view);
+        ArrayList<AdoptaModel> adoptaModels = AdoptaDetails.getAdopta();
+        AdapterAdopta adoptaAdapter = new AdapterAdopta(Adopta.this,adoptaModels);
+        listview.setAdapter(adoptaAdapter);
 
 
 
