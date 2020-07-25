@@ -192,6 +192,7 @@
                 android:background="#3F5BAE"
                 android:text="@string/form_contact_send"
                 android:textAlignment="center"
+                android:onClick="enviar"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
 
