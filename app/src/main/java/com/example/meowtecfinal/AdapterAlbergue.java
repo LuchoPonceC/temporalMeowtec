@@ -1,71 +1,116 @@
 package com.example.meowtecfinal;
 
 import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.meowtecfinal.model.AlbergueModel;
 
-import java.util.ArrayList;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public class AdapterAlbergue extends BaseAdapter {
+import java.util.ArrayList;
+import java.util.List;
+
+public class AdapterAlbergue extends RecyclerView.Adapter<AdapterAlbergue.ViewHolder> {
 
     private Context context;
-    private ArrayList<AlbergueModel> albergueModels;
+    public JSONArray albergues;
 
-    AdapterAlbergue(Context context, ArrayList<AlbergueModel> albergueModels ){
+    //private ArrayList<AlbergueModel> albergueModels;
+
+    public AdapterAlbergue(JSONArray jsonArray, Context context){
         this.context = context;
-        this.albergueModels = albergueModels;
+        this.albergues = jsonArray;
     }
 
     @Override
-    public int getCount() {
-        return albergueModels.size();
+    public int getItemCount() {
+        return albergues.length();
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_albergues,parent,false);
+
+        return new ViewHolder(view);
     }
 
     @Override
-    public Object getItem(int position) {
-        return albergueModels.get(position);
-    }
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+        final JSONObject albergue;
+        try {
+            albergue = albergues.getJSONObject(position);
+            String nombre = albergue.getString("nombre_albergues");
+            String representante = albergue.getString("nombre");
+            String ciudad = albergue.getString("ciudad");
+            int fecha = albergue.getInt("anios");
+            int total_gatos = albergue.getInt("num_gatos");
+            String tipo_albergue = albergue.getString("albergan");
+            String telefono = albergue.getString("telefono");
+            //holder.images.setImageResource(albergue.get);
+            holder.name.setText(nombre);
+            holder.name.setText(representante);
+            holder.name.setText(ciudad);
+            holder.name.setText("Desde " +Integer.toString(2020 - fecha));
+            holder.name.setText(Integer.toString(total_gatos));
+            holder.name.setText(tipo_albergue);
+            holder.name.setText(telefono);
 
-    @Override
-    public View getView(int position, View view, ViewGroup viewGroup) {
 
-        if(view == null){
-            view = View.inflate(context , R.layout.list_albergues, null);
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
-        ImageView images = (ImageView)view.findViewById(R.id.imageAlbergue);
-        TextView name = (TextView)view.findViewById(R.id.albergueName);
-        TextView tipo = (TextView)view.findViewById(R.id.albergueTipo);
-        TextView place = (TextView)view.findViewById(R.id.alberguePlace);
-        TextView date = (TextView)view.findViewById(R.id.albergueDate);
-        TextView size = (TextView)view.findViewById(R.id.albergueSize);
-        TextView rName = (TextView)view.findViewById(R.id.albergueRName);
-        TextView rNumber = (TextView)view.findViewById(R.id.albergueRNumber);
 
-        AlbergueModel albergueModel = albergueModels.get(position);
-        images.setImageResource(albergueModel.getAlbergueImage());
-        name.setText(albergueModel.getAlbergueName());
-        tipo.setText(albergueModel.getAlbergueTipo());
-        place.setText(albergueModel.getAlberguePlace());
-        date.setText(albergueModel.getAlbergueDate());
-        size.setText(albergueModel.getAlbergueSize());
-        rName.setText(albergueModel.getAlbergueRName());
-        rNumber.setText(albergueModel.getAlbergueRNumber());
-
-
-
-        return view;
     }
+
+
+
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        ImageView images ;
+        TextView name ;
+        TextView tipo ;
+        TextView place ;
+        TextView date ;
+        TextView size;
+        TextView rName;
+        TextView rNumber;
+
+        RelativeLayout container;
+
+        public ViewHolder(View itemView){
+            super(itemView);
+
+             images = itemView.findViewById(R.id.imageAlbergue);
+             name = itemView.findViewById(R.id.albergueName);
+             tipo = itemView.findViewById(R.id.albergueTipo);
+             place = itemView.findViewById(R.id.alberguePlace);
+             date = itemView.findViewById(R.id.albergueDate);
+             size = itemView.findViewById(R.id.albergueSize);
+             rName = itemView.findViewById(R.id.albergueRName);
+             rNumber = itemView.findViewById(R.id.albergueRNumber);
+
+
+        }
+
+    }
+
+
+
 }
 
-;
+
